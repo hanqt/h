@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+    </head>
+    <body>
+        <span id="myspan">span标签内容</span>
+        <button value="普通按钮" id="btn">普通按钮</button>
+        <input type="button" value="点击我" onclick="alert (add('7,8'))"/>
+        <script>
+            function add(a,b){
+                return a+b;
+            }
+            /*alert('33+22='+(33+22));
+            if (16>18){
+                document.write("成年")
+            }else{
+                document.write("未成年")
+            }
+            var num1 =22;
+            var num2 =33;
+            alert(num1 + num2);
+            alert(num1 - num2);
+            alert(add(55,2))
+            var name = prompt("请输入你的姓名")
+            alert(name)
+            var getValue = document.getElementById("myspan")
+            alert(getValue)
+            alert(getValue.innerHTML)
+            var mystr ="iphone"
+            alert(mystr.length)
+            alert(mystr.toUpperCase())*/
+            var stu={}
+            stu.name="jake"
+            stu.sex="man"
+            stu.age=21
+            //alert(stu.age)
+            stu.intr = function(){
+                return "我的名字是"+this.name+",我的年龄是:"+this.age
+            }
+            //alert(stu.intr())
+            document.getElementById("btn").onclick=function(){
+                alert(this.value)
+            }
+        </script>
+        
+    </body>
+</html>
