@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>圆的计算</title>
+</head>
+
+<body>
+    <div>
+        半径:<input type="number" name="r" id="r" placeholder="请输入半径" onblur="myAccu()" /><br>
+        周长:<input type="text" id="d">
+        面积:<input type="text" id="s">
+    </div>
+    <script>
+        function myAccu() {
+            var r = document.getElementById("r").value;
+            var d = 2 * Math.PI * r;
+            console.log(r);
+            console.log(d);
+            var s = Math.PI * r * r;
+            document.getElementById("d").value = d;
+            document.getElementById("s").value = s;
+        }
+        var numstar = prompt("请输入金字塔层数:");
+        alert(numstar);
+        document.write("<div style='text-align:center'>")
+        for(var i=1;i<=numstar;i++){
+            for(var j=0;j<2*i-1;j++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("</div>")
+        document.write("<hr>")
+        for(var i=1;i<=numstar;i++){
+        for(var k=0;k<=numstar-i;k++){
+            document.write("&nbsp;")
+        }
+        for(var j=0;j<2*i-1;j++){
+            documetn.write("*")
+        }
+        document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>
